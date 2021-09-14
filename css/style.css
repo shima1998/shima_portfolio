@@ -99,6 +99,7 @@ table, td, th{/* リセットされているため再定義しないと(CSSで�
 
 table {/*テーブルのセル幅を均等にする処理*/
     width: 100%;/*これないと幅が均等にならない 親要素基準の100%*/
+    height: 1rem;
     table-layout: fixed;/*1行目基準であとのセルを固定 これ以上大きくなれないので勝手に折り返すっぽい*/
 }
 
@@ -107,4 +108,10 @@ th {
 }
 
 td {
+    text-align: center;
+}
+
+.product-sum {
+    width: 100%;
+    height: auto;
 }
