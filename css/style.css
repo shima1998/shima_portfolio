@@ -2,10 +2,26 @@ html {
     font-size: 62.5%;/*1rem = 10px*　remはルートのフォント、つまりここを参照する　*/
 }
 
+/* body */
+
 body{
     font-size: 1.6em;/*　16px. emは親要素のフォントサイズ基準に大きさを計算　*/
     /* margin: 0rem; */
 }
+
+
+
+.main-top {/*headerのメニュー分下に下げている*/
+    padding: 3rem 0 0 0;
+} 
+
+.home-section{/*自己紹介用*/
+    margin: 2rem;
+    padding: 1.5rem;
+}
+
+
+/* header */
 
 header{
     position: fixed;/*これやると領域が文字やオブジェクトの分しか展開されない。あと設定しないとheaderの分bodyの要素上にあがって重なるから要設定。  */
@@ -40,9 +56,13 @@ header nav.global-menu li:hover{
     background-color: gray;
 }
 
+/* a */
+
 a {
     text-decoration: none;
 }
+
+/* heading(リセットされているため) */
 
 .heading1 {
     font-size: 4.8rem;
@@ -67,11 +87,24 @@ a {
     font-size: 4.8rem;
 }
 
-.main-top {
-    padding: 3rem 0 0 0;
-} 
+/* table */
 
-.home-section{
-    margin: 2rem;
-    padding: 1.5rem;
+table, td, th{/* リセットされているため再定義しないと(CSSで設定しないと?)線が出てこない */
+    border: 1px solid black;
+}
+
+.table-box{/*ページ内でのテーブル全体の大きさを固定*/
+    margin: 5rem;
+}
+
+table {/*テーブルのセル幅を均等にする処理*/
+    width: 100%;/*これないと幅が均等にならない 親要素基準の100%*/
+    table-layout: fixed;/*1行目基準であとのセルを固定 これ以上大きくなれないので勝手に折り返すっぽい*/
+}
+
+th {
+    text-align: center;
+}
+
+td {
 }
